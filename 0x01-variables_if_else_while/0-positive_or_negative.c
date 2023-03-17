@@ -4,8 +4,6 @@
 
 /**
  * main - check if the number n is positive, negative or null
- * @n: number to be checked
- *
  * Return: 0
  */
 
