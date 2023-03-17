@@ -15,7 +15,7 @@ int main(void)
 	{
 		for (j = 48 ; j <= 56; j++)
 		{
-			for (k = 48 ; k <=57 ; k++)
+			for (k = 48 ; k <= 57 ; k++)
 			{
 				for (l = 48 ; l <= 57 ; l++)
 				{
@@ -27,9 +27,10 @@ int main(void)
 					{
 						putchar(i);
 						putchar(j);
+						putchar(' ');
 						putchar(k);
 						putchar(l);
-						if (i < 55)
+						if (i < 57)
 						{
 							putchar(',');
 							putchar(' ');
