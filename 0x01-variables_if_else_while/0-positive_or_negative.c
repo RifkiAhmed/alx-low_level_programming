@@ -7,12 +7,11 @@
  * main  - print whether the value of  n is positive, negative or null
  * @n: the number to be checked
  *
- * Return: 0, end of programm
+ * Return: end of program return zero
  */
 int main(void)
 {
 	int n;
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
