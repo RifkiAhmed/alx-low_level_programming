@@ -19,7 +19,7 @@ int main(void)
 			{
 				for (l = 48 ; l <= 57 ; l++)
 				{
-					if (l ==48)
+					if (l == k == 48)
 					{
 						continue;
 					}
