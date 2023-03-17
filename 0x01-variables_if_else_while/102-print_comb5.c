@@ -19,9 +19,12 @@ int main(void)
 			{
 				for (l = 48 ; l <= 57 ; l++)
 				{
-					if ((l == k) && (k == 0))
+					if (l == k)
 					{
-						continue;
+						if (k == 0)
+						{
+							continue;
+						}
 					}
 					else
 					{
