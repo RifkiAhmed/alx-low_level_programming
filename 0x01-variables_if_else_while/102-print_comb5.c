@@ -30,11 +30,11 @@ int main(void)
 						putchar(' ');
 						putchar(k);
 						putchar(l);
-						if (i < 57)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					}
+					if (i < 57)
+					{
+						putchar(',');
+						putchar(' ');
 					}
 				}
 			}
