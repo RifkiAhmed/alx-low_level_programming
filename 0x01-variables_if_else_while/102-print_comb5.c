@@ -11,30 +11,35 @@ int main(void)
 {
 	int i, j, k, l;
 
-	for (i = 48 ; i <= 57 ; i++)
-		for (j = i ; j <= 56 ; j++)
-			for (k = i ; k <= 57 ; k++)
-				for (l = k + 1 ; l <= 57 ; l++)
-				{
-					if (i == k && j == l)
-					{
-						continue;
-					}
-					else
-					{
-						putchar(i);
-						putchar(j);
-						putchar(' ');
-						putchar(k);
-						putchar(l);
-					}
-					if (j < 56)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-
+	i = j = k = l = 48;
+	while (i <= 57)
+	{
+		l++;
+		if (l == 57)
+		{
+			k++;
+			l = 0;
+		}
+		if (k == 57)
+		{
+			j++;
+			k = 0;
+		}
+		if (j == 57)
+		{
+			i++;
+		}
+		putchar(i);
+		putchar(j);
+		putchar(' ');
+		putchar(k);
+		putchar(l);
+		if (j < 56)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
 	putchar('\n');
 
 	return (0);
