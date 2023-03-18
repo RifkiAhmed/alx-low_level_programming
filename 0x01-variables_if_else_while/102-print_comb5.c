@@ -30,11 +30,18 @@ int main(void)
 			i++;
 			j = 48;
 		}
-		putchar(i);
-		putchar(j);
-		putchar(' ');
-		putchar(k);
-		putchar(l);
+		if (j > i)
+		{
+			continue;
+		}
+		else
+		{
+			putchar(i);
+			putchar(j);
+			putchar(' ');
+			putchar(k);
+			putchar(l);
+		}
 		if (j < 56)
 		{
 			putchar(',');
