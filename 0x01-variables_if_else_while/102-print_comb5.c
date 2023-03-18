@@ -13,8 +13,8 @@ int main(void)
 
 	for (i = 48 ; i <= 57 ; i++)
 		for (j = 48 ; j <= 56 ; j++)
-			for (k = 48 ; k <= 57 ; k++)
-				for (l = 48 ; l <= 57 ; l++)
+			for (k = i ; k <= 57 ; k++)
+				for (l = j ; l <= 57 ; l++)
 				{
 					if (i == k && j == l)
 					{
