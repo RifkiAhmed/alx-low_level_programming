@@ -10,40 +10,30 @@
 int main(void)
 {
 	int i, j, k, l;
-
-	i = j = k = l = 48;
-	while (i <= 57)
-	{
-		l++;
-		if (l > 57)
-		{
-			k++;
-			l = 48;
-		}
-		if (k > 57)
-		{
-			j++;
-			k = 48;
-		}
-		if (j > 57)
-		{
-			i++;
-			j = 48;
-		}
-		if (i < k && j < l)
-		{
-			putchar(i);
-			putchar(j);
-			putchar(' ');
-			putchar(k);
-			putchar(l);
-		}
-		if (j < 56)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	}
+	
+	fot (i = 48 ; i <= 57 ; i++)
+		for (j = 48 ; j <= 57 ; j++)
+			for (k = 48 ; k <= 57 ; k++)
+				for (l = 48 ; l <= 57 ; l++)
+				{
+					if (i >= k && j >= l)
+					{
+						continue;
+					}
+					else
+					{
+						putchar(i);
+						putchar(j);
+						putchar(' ');
+						putchar(k);
+						putchar(l);
+					}
+					if (j <56)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
 	putchar('\n');
 
 	return (0);
