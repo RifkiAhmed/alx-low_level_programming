@@ -11,7 +11,7 @@ int main(void)
 {
 	int i, j, k, l;
 	
-	fot (i = 48 ; i <= 57 ; i++)
+	for (i = 48 ; i <= 57 ; i++)
 		for (j = 48 ; j <= 57 ; j++)
 			for (k = 48 ; k <= 57 ; k++)
 				for (l = 48 ; l <= 57 ; l++)
