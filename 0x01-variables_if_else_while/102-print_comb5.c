@@ -30,7 +30,7 @@ int main(void)
 			i++;
 			j = 48;
 		}
-		if (i < k )
+		if (i < k && j < l)
 		{
 			putchar(i);
 			putchar(j);
