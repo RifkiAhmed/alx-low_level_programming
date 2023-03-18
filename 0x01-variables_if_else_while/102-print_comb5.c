@@ -18,16 +18,17 @@ int main(void)
 		if (l == 57)
 		{
 			k++;
-			l = 0;
+			l = 48;
 		}
 		if (k == 57)
 		{
 			j++;
-			k = 0;
+			k = 48;
 		}
 		if (j == 57)
 		{
 			i++;
+			j = 48;
 		}
 		putchar(i);
 		putchar(j);
