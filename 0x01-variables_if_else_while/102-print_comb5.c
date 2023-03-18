@@ -31,6 +31,7 @@ int main(void)
 			j = 48;
 		}
 		if (i < k )
+		{
 			putchar(i);
 			putchar(j);
 			putchar(' ');
