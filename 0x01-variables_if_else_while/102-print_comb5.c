@@ -12,9 +12,9 @@ int main(void)
 	int i, j, k, l;
 
 	for (i = 48 ; i <= 57 ; i++)
-		for (j = 48 ; j <= 56 ; j++)
-			for (k = i ; k <= 57 ; k++)
-				for (l = j ; l <= 57 ; l++)
+		for (j = i ; j <= 56 ; j++)
+			for (k = j + i ; k <= 57 ; k++)
+				for (l = k + j ; l <= 57 ; l++)
 				{
 					if (i == k && j == l)
 					{
