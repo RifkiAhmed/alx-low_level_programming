@@ -30,12 +30,7 @@ int main(void)
 			i++;
 			j = 48;
 		}
-		if (j > i)
-		{
-			continue;
-		}
-		else
-		{
+		if (i < k )
 			putchar(i);
 			putchar(j);
 			putchar(' ');
