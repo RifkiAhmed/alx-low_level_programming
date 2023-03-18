@@ -15,17 +15,17 @@ int main(void)
 	while (i <= 57)
 	{
 		l++;
-		if (l == 57)
+		if (l > 57)
 		{
 			k++;
 			l = 48;
 		}
-		if (k == 57)
+		if (k > 57)
 		{
 			j++;
 			k = 48;
 		}
-		if (j == 57)
+		if (j > 57)
 		{
 			i++;
 			j = 48;
