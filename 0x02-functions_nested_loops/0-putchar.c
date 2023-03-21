@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - prints _putchar
+ * main - prints "_putchar"
  * _putchar: prints alphabets
- * Retrun: 0
+ * Retrun: 0 end of program
  */
 
 int main(void)
