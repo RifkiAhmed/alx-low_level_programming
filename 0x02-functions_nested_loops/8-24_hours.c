@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * times_table - Write a function that prints the
- * 9 times table, starting with 0
+ * jack_bauer - Write a function that prints every minute
+ * of the day of Jack Bauer, starting from 00:00 to 23:59
  * _putchar: prints digits
  */
 
-void times_table(void)
+void jack_bauer(void)
 {
 	int m, h;
 
