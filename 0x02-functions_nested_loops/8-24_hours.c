@@ -6,7 +6,7 @@
  * Return: always 0 end of program
  */
 
-void print_alphabet_x10(void)
+void jack_bauer(void)
 {
 	int m, h;
 
