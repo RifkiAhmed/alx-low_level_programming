@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * jack_bauer - prints the alphabet, in lowercase 10 times
+ * times_table - Write a function that prints the
+ * 9 times table, starting with 0
  * _putchar: prints digits
  */
 
-void jack_bauer(void)
+void times_table(void)
 {
 	int a, b, X, mod;
 
