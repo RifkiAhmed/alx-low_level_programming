@@ -7,11 +7,8 @@
 
 int main(void)
 {
-	long int a, b, c, d;
-	b = 1;
-	c = 2;
-	d = 3;
-	
+	long int a, b = 1, c = 2, d = 3;
+
 	for (a = 0; a < 50; a++)
 	{
 		if (a != 49)
