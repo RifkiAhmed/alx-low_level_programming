@@ -27,6 +27,6 @@ void print_to_98(int n)
 		{
 			_putchar(',');
 			n++;
-			printf("%d", i);
+			printf("%d", n);
 		}
 }
