@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
- *
  * _strncpy - a function that copies a string
  *
  * if length of src is less than n, additional null bytes are written to dest
