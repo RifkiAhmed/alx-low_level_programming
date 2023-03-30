@@ -1,36 +1,29 @@
-nclude "main.h"
+#include "main.h"
 
 /**
- * leet - encodes a string into 1337
- * letters a and A are replaced by 4
- * Letters e and E are replaced by 3
- * Letters o and O are replaced by 0
- * Letters t and T are replaced by 7
- * Letters l and L are replaced by 1
- * @s: pointer to string.
+ * leet - Write a function that encodes a string into 1337
  *
- * Return: pointer to s
+ * @changed: This is the input string
+ *
+ * Return: String converted to 1337
  */
 
-char *leet(char *s)
+char *leet(char *changed)
 {
-	int stringCount, leetCount;
-	char leetLetters[] = "aAeEoOtTlL";
-	char leetNums[] = "4433007711";
+	int index, j;
+	char minus[] = {'a', 'e', 'o', 't', 'l', '\0'};
+	char mayus[] = {'A', 'E', 'O', 'T', 'L', '\0'};
+	char numbers[] = {'4', '3', '0', '7', '1', '\0'};
 
-	stringCount = 0;
-	while (s[stringCount] != '\0')
+	for (index = 0; changed[index] != '\0'; ++index)
 	{
-		leetCount = 0;
-		while (leetCount < 10)
+		for (j = 0; j < 5; j++)
 		{
-			if (leetLetters[leetCount] == s[stringCount])
+			if (changed[index] == minus[j] || changed[index] == mayus[j])
 			{
-				s[stringCount] = leetNums[leetCount];
+				changed[index] = numbers[j];
 			}
-			leetCount++;
 		}
-		stringCount++;
 	}
-	return (s);
+	return (changed);
 }
