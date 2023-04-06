@@ -1,20 +1,20 @@
 #include "main.h"
 /**
- *  * square - find the natural square of 'n' if exists
- *   * @n: int number
- *    * @sq: square of 'n' if exists
- *     *
- *      * Return: the square
- *       */
+ * square - find the natural square of 'n' if exists
+ * @n: int number
+ * @sq: square of 'n' if exists
+ *
+ * Return: the square
+ */
 
 int square(int n, int sq)
 {
-	        if (sq * sq > n)
-			                return (-1);
-		        else if (sq * sq == n)
-				                return (sq);
-			        else
-					                return (square(n, sq + 1));
+	if (sq * sq > n)
+		return (-1);
+	else if (sq * sq == n)
+		return (sq);
+	else
+		return (square(n, sq + 1));
 }
 
 
