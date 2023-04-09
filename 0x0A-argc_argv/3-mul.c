@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,7 +7,7 @@
   * @argc: number of arguements passed to the program
   * @argv: array of strings of each arguments passed to the program
   *
-  * Return: multiplies two numbers else print 'error' and return 1
+  * Return: multiple of two numbers else print 'error' and return 1
   */
 
 int main(int argc, char **argv)
