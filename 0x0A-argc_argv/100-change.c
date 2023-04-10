@@ -7,7 +7,7 @@
  * @argc: number of arguments passed to main()
  * @argv: vector of arguments
  *
- * Return: 0
+ * Return: 1 if amount is negatif else 0
  */
 
 int main(int argc, char **argv)
@@ -21,6 +21,7 @@ int main(int argc, char **argv)
 		if (amount < 0)
 		{
 			printf("0\n");
+			return (0);
 		}
 		if ((amount / 25) >= 1)
 		{
