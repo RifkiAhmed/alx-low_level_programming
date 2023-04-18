@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int _strlen(char *s);
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src);
 
 /**
  * *new_dog - prints a struct dog
