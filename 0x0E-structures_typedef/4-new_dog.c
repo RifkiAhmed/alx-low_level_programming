@@ -1,8 +1,50 @@
 #include "dog.h"
 #include <stdlib.h>
 
-int _strlen(char *s);
-char *_strcpy(char *dest, char *src);
+/**
+ * _strlen - length of a string
+ * @s: string to check
+ *
+ * Return: length of the string
+ */
+
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+
+/**
+ * *_strcpy - copies the string pointed to by src
+ * @dest: pointer to the buffer in which we copy the string
+ * @src: string to be copied
+ *
+ * Return: the pointer to dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int len, i;
+
+	len = 0;
+	while (src[len] != '\0')
+	{
+		len++;
+	}
+	for (i = 0; i < len; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
+	return (dest);
+}
 
 /**
  * *new_dog - prints a struct dog
@@ -39,48 +81,4 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog->age = age;
 
 	return (dog);
-}
-
-/**
- * _strlen - length of a string
- * @s: string to check
- *
- * Return: length of the string
- */
-
-int _strlen(char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- * *_strcpy - copies the string pointed to by src
- * @dest: pointer to the buffer in which we copy the string
- * @src: string to be copied
- *
- * Return: the pointer to dest
- */
-
-char *_strcpy(char *dest, char *src)
-{
-	int len, i;
-
-	len = 0;
-	while (src[len] != '\0')
-	{
-		len++;
-	}
-	for (i = 0; i < len; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i] = '\0';
-	return (dest);
 }
