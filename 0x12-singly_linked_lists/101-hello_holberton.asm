@@ -1,5 +1,5 @@
+	extern 	printf
 	global	main
-	extern	printf
 main:
 	mov		edi, text
 	mov		eax, 0
