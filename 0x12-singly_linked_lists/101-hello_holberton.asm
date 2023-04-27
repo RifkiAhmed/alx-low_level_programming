@@ -1,3 +1,4 @@
+ection .bss
 global main
 extern printf
 
@@ -8,5 +9,3 @@ main:
 
 section .data
     text db `Hello, Holberton`, 0
-
-section .bss
