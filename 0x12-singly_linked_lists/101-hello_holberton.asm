@@ -1,8 +1,12 @@
-	extern 	printf
-	global	main
-main:
-	mov		edi, text
-	mov		eax, 0
-	call		printf
+global main
+extern printf
 
-	text db `Hello, Holberton\n`,0
+main:
+    mov edi, text
+    mov eax, 0
+    call printf
+
+section .data
+    text db `Hello, Holberton`, 0
+
+section .bss
