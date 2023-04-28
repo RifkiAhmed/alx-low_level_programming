@@ -1,4 +1,4 @@
-ection .bss
+section .bss
 global main
 extern printf
 
