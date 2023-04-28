@@ -1,14 +1,12 @@
-section .data
-    text db `Hello, Holberton\n`, 0
-
-section .text
-    global main
-    extern printf
+global main
+extern printf
 
 main:
     mov edi, text
-    xor eax, eax
+    mov eax, 0
     call printf
 
-    mov eax, 0
-    ret
+section .data
+    text db `Hello, Holberton\n`, 0
+
+section .bss
