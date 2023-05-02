@@ -3,10 +3,10 @@
 
 /**
  * add_nodeint_end - function adds a new element at the end of listint_t list
- * @head: header of listint_t list
+ * @head: head of listint_t list
  * @n: number to add
  *
- * Return: number of nodes
+ * Return: address of the new node
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
@@ -21,7 +21,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	if (*head == NULL)
 	{
 		*head = tmp;
-		return (*head);
+		return (tmp);
 	}
 	ptr = *head;
 	while (ptr->next != NULL)
