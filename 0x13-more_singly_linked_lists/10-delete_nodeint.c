@@ -42,7 +42,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	if (tmp->next == NULL)
 	{
-		if (count == (index - 1))
+		if (count == index)
 		{
 			current->next = NULL;
 			free(tmp);
