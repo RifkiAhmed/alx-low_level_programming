@@ -9,7 +9,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int bit, i;
+	int i;
 	unsigned int bits;
 	unsigned long int position;
 
@@ -19,18 +19,15 @@ int get_bit(unsigned long int n, unsigned int index)
 		position = n >> i;
 
 		if (position & 1)
-		{
 			bits++;
-		}
 		else if (bits)
 			bits++;
 	}
 	if (!bits)
 		return (-1);
 
-	if (index > bits)
+	if (index >= bits)
 		return (-1);
-	bit = (n & (1 << index)) >> index;
 
-	return (bit);
+	return ((n & (1 << index)) >> index);
 }
