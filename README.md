@@ -1,1 +1,1 @@
-Create readme file old 2023
+This is C file Input Output project from ALX Program
