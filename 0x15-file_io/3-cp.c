@@ -13,7 +13,7 @@ int fl_close(int fd)
 {
 if (!close(fd))
 return (0);
-dprintf(STDERR_FILENO, "Error: failed close of fd %d\n", fd);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 return (-1);
 
 }
@@ -33,7 +33,7 @@ ssize_t bytes = read(fd, buf, count);
 
 if (bytes > -1)
 return (bytes);
-dprintf(STDERR_FILENO, "Error: failed read from file %s\n", filename);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 return (-1);
 }
 
@@ -52,7 +52,7 @@ ssize_t bytes_written = write(fd, buf, count);
 
 if (bytes_written > -1)
 return (bytes_written);
-dprintf(STDERR_FILENO, "Error: failed write to %s\n", filename);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 return (-1);
 }
 
@@ -77,13 +77,13 @@ exit(EXIT_FAILURE);
 input = open(argv[1], O_RDONLY);
 if (input < 0)
 {
-dprintf(STDERR_FILENO, "Error: failed read from file %s\n", argv[1]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(EXIT_FAILURE);
 }
 output = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC);
 if (output < 0)
 {
-dprintf(STDERR_FILENO, "Error: failed write to %s\n", argv[2]);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 fl_close(input);
 exit(EXIT_FAILURE);
 }
