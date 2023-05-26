@@ -1,6 +1,24 @@
 #include "main.h"
 
 /**
+ * _strlen - count the length of the given string
+ * @string: string
+ * Return: length
+ */
+ssize_t _strlen(const char *string)
+{
+	const char *str_dup = string;
+
+	if (!string)
+		return (-1);
+
+	while (*str_dup)
+		++str_dup;
+
+	return (str_dup - string);
+}
+
+/**
  * append_text_to_file - append the text at the end of the file
  * @filename: name of the file
  * @text_content: text to append to the file
