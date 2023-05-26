@@ -34,7 +34,7 @@ void _error(int file_from, int file_to, char **arg)
 
 int main(int argc, char **argv)
 {
-	int file_from, file_to, fail;
+	int file_from, file_to, value;
 	ssize_t n_chrs, fd;
 	char buf[1024];
 
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 	}
 
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND);
 	_error(file_from, file_to, argv);
 
 	n_chrs = 1024;
@@ -59,15 +59,15 @@ int main(int argc, char **argv)
 			_error(0, -1, argv);
 	}
 
-	fail = close(file_from);
-	if (fail == -1)
+	value = close(file_from);
+	if (value == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 
-	fail = close(file_to);
-	if (fail == -1)
+	value = close(file_to);
+	if (value == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
