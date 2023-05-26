@@ -25,7 +25,7 @@ return (-1);
 
 if (text_content)
 {
-len = _stringlen(text_content);
+len = _strlen(text_content);
 wr_chars = write(fd, text_content, len);
 }
 close(fd);
