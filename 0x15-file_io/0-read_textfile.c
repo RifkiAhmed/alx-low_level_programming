@@ -1,15 +1,16 @@
 #include "main.h"
 
 /**
- * read_textfile - reads a text file and prints it to standard output
+ * read_textfile - read from a text file and print it to stdout
  * @filename: name of file
  * @letters: number of letters
  *
- * Return: number of letters written
+ * Return: numbers of letters written
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fd, chars_rd, chars_wr;
+	ssize_t fd, ch_read, ch_write;
 	char *text;
 
 	text = malloc(letters);
@@ -26,9 +27,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	chars_rd = read(fd, text, letters);
-	chars_wr = write(STDOUT_FILENO, text, chars_rd);
+	ch_read = read(fd, text, letters);
+	ch_write = write(STDOUT_FILENO, text, ch_read);
 	close(fd);
 
-	return (chars_wr);
+	return (ch_write);
 }
