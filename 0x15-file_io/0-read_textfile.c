@@ -7,11 +7,11 @@
  *
  * Return: numbers of letters written
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t fd, ch_read, ch_write;
 	char *text;
+
 
 	text = malloc(letters);
 	if (text == NULL)
