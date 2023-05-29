@@ -13,7 +13,7 @@ ssize_t fd, read_chars, write_chars;
 char *buffer;
 
 buffer = malloc(letters);
-if (text == NULL)
+if (buffer == NULL)
 return (0);
 if (filename == NULL)
 return (0);
