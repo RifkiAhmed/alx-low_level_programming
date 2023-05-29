@@ -1,34 +1,30 @@
 #include "main.h"
 
 /**
- * read_textfile - a function that reads a text file and prints it
+ * read_textfile - reads a text file and prints it to the standar output
  * @filename: name of file
- * @letters: num of bytes
+ * @letters: number of bytes
  *
- * Return: return the values
+ * Return: number of chars written
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-ssize_t fd, r, x;
-char *text;
+ssize_t fd, read_chars, write_chars;
+char *buffer;
 
-text = malloc(letters);
+buffer = malloc(letters);
 if (text == NULL)
 return (0);
-
 if (filename == NULL)
 return (0);
-
 fd = open(filename, O_RDONLY);
 if (fd == -1)
 {
-free(text);
 return (0);
 }
-
-r = read(fd, text, letters);
-x = write(STDOUT_FILENO, text, r);
+read_chars = read(fd, buffer, letters);
+write_chars = write(STDOUT_FILENO, buffer, read_chars);
 close(fd);
 
-return (x);
+return (write_chars);
 }
