@@ -20,6 +20,7 @@ return (0);
 fd = open(filename, O_RDONLY);
 if (fd == -1)
 {
+free(buffer);
 return (0);
 }
 read_chars = read(fd, buffer, letters);
