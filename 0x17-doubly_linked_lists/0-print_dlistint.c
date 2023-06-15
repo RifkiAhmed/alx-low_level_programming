@@ -1,5 +1,6 @@
 #include "lists.h"
-
+#include <stddef.h>
+#include <stdlib.h>
 /**
  * print_dlistint -  prints all the elements of a dlistint_t list
  * @h: pointer to the  head of doubly linked list
@@ -9,7 +10,7 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t count = 0;
-	dlistint_t *temp;
+	const dlistint_t *temp;
 
 	if (h == NULL)
 		return (0);
@@ -22,9 +23,9 @@ size_t print_dlistint(const dlistint_t *h)
 	temp = h;
 	while (temp)
 	{
-		printf("%d\n", h->n);
+		printf("%d\n", temp->n);
 		count++;
 		temp = temp->next;
 	}
-	return (count)
+	return (count);
 }
