@@ -9,21 +9,21 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int index;
 	hash_node_t *head = NULL;
 
-	if (!ht)
-		return;
+	if (ht == NULL)
+		printf("{}\n");
+	printf("{");
 	for (index = 0; index < ht->size; index++)
 	{
-		head = ht->array[index];
-		if (head)
+		if (ht->array[index])
 		{
-			printf("{");
+			head = ht->array[index];
 			while (head)
 			{
 				printf("'%s': '%s', ", head->key, head->value);
 				head = head->next;
 			}
-			printf("}\n");
+			head = NULL;
 		}
-		head = NULL;
 	}
+	printf("}\n");
 }
