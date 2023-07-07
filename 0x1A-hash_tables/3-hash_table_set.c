@@ -6,7 +6,7 @@
  * @key: key of node
  * @value: value of node
  *
- * Return; 1 else 0 if it fails
+ * Return: 1 else 0 if it fails
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
