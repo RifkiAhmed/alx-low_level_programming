@@ -29,7 +29,8 @@ shash_table_t *shash_table_create(unsigned long int size)
  */
 void sorted_dllist(shash_table_t *ht, shash_node_t *head)
 {
-	shash_node_t *temp = NULL;
+	shash_node_t *prev = NULL;
+	shash_node_t *current = ht->shead;
 
 	if (ht->shead == NULL)
 	{
@@ -47,28 +48,19 @@ void sorted_dllist(shash_table_t *ht, shash_node_t *head)
 		ht->shead = head;
 		return;
 	}
-	temp = ht->shead;
-	while (temp)
-	{
-		if (strcmp(head->key, temp->key) <= 0 && temp != ht->shead)
-		{
-			head->sprev = temp->sprev;
-			head->snext = temp;
-			temp->sprev = head;
-			return;
-		}
-		if (temp->snext == NULL)
-		{
-			temp->snext = head;
-			head->sprev = temp;
-			head->snext = NULL;
-			ht->stail = head;
-			return;
-		}
-		temp = temp->snext;
-	}
-}
 
+	do {
+		prev = current;
+		current = current->snext;
+	} while (current && strcmp(current->key, head->key) < 0);
+	prev->snext = head;
+	head->sprev = prev;
+	head->snext = current;
+	if (current)
+		current->sprev = head;
+	else
+		ht->stail = head;
+}
 /**
  * shash_table_set - adds an element to the sorted hash table
  * @ht: pointer to sorted hash table
