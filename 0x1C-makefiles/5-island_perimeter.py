@@ -32,3 +32,4 @@ def island_perimeter(grid):
                 break
             old_lands = current_lands
         return perimeter
+    return 0
