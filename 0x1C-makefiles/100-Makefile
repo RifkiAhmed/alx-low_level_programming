@@ -8,10 +8,10 @@ all : $(OBJ) m.h
 	$(CC) $^ -o $(NAME)
 
 clean :
-	$(RM) -f *~ $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean :
-	$(RM) -f $(OBJ)
+	$(RM) $(OBJ)
 
 fclean : clean oclean
 
