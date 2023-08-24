@@ -4,14 +4,14 @@ SRC = main.c school.c
 OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
 
-all : $(OBJ) m.h
+all : m.h $(OBJ)
 	$(CC) $^ -o $(NAME)
 
 clean :
-	$(RM) *~ $(NAME)
+	$(RM) -f *~ $(NAME)
 
 oclean :
-	$(RM) $(OBJ)
+	$(RM) -f $(OBJ)
 
 fclean : clean oclean
 
