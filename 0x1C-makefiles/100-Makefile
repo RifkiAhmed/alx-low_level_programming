@@ -1,5 +1,3 @@
-.PHONY : all clean oclean fclean re
-
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC = main.c school.c
@@ -7,7 +5,7 @@ OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
 
 all : $(OBJ) m.h
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $^ -o $(NAME)
 
 clean :
 	$(RM) -f *~ $(NAME)
@@ -18,3 +16,5 @@ oclean :
 fclean : clean oclean
 
 re : oclean all
+
+.PHONY : all clean oclean fclean re
