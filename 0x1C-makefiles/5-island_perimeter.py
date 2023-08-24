@@ -6,14 +6,14 @@
 
 def island_perimeter(grid):
     """ Calculate the perimeter of the island """
-    if grid and isinstance(grid, list):
+    if grid:
         old_lands = 0
         perimeter = 0
         for i in range(len(grid)):
             lands = 0
             above = 0
             current_lands = 0
-            for j in range(len(grid[i]) - 1):
+            for j in range(len(grid[i])):
                 if grid[i][j]:
                     lands += 1
                     current_lands += 1
@@ -28,8 +28,6 @@ def island_perimeter(grid):
             if lands:
                 perimeter += lands * 2 + 2
             perimeter -= above * 2
-            if not current_lands and old_lands:
-                break
             old_lands = current_lands
         return perimeter
     return 0
