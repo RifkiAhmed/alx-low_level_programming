@@ -40,11 +40,11 @@ int binary_algorithm(int *array, size_t low, size_t high, int value)
 		print_array(array, low, high);
 		mid = (low + high) / 2;
 		if (array[mid] > value)
-			return (binary_algorithm(array, low, mid - 1, value));
+			return (binary_algorithm(array, low, mid, value));
 		else if (array[mid] < value)
 			return (binary_algorithm(array, mid + 1, high, value));
-		if (array[mid] == array[mid - 1])
-			return (binary_algorithm(array, mid - 1, mid, value));
+		if (array[mid - 1] == value)
+			return (binary_algorithm(array, low, mid, value));
 		return (mid);
 	}
 	else
@@ -66,6 +66,5 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	if (array)
 		return (binary_algorithm(array, 0, size - 1, value));
-	else
-		return (-1);
+	return (-1);
 }
