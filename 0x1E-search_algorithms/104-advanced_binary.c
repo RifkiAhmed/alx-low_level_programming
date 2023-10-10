@@ -43,13 +43,8 @@ int binary_algorithm(int *array, size_t low, size_t high, int value)
 			return (binary_algorithm(array, low, mid - 1, value));
 		else if (array[mid] < value)
 			return (binary_algorithm(array, mid + 1, high, value));
-		while (mid >= low)
-		{
-			if (array[mid] == array[mid - 1])
-				mid -= 1;
-			else
-				break;
-		}
+		if (array[mid] == array[mid - 1])
+			return (binary_algorithm(array, mid - 1, mid, value));
 		return (mid);
 	}
 	else
